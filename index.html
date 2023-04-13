@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MY ROBOT</title>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+  </head>
+
+  <body>
+    <a-scene>
+
+        <a-camera look-controls-enabled wasd-controls-enabled position="0 5 15">
+        </a-camera>
+    
+      <!-- Head -->
+        <a-box color="#0276aa" position="0 8 0" width="3.2" height="2.2"></a-box>
+
+      <!-- antenna -->
+        <a-circle position="0 9.15 0" color="orange" radius="0.8" ></a-circle>
+
+        <a-cylinder color="#757575" height="1.5" radius="0.05" position="0 11 0" animation="property: position; from:-0.2 10.4 -0.1;to: 0.2 10.4 -0.1;dir:alternate;loop: true; dur: 1000;"></a-cylinder>
+     
+        <a-sphere color="#ef5350" radius="0.3" position="0 11 0" animation="property: position; from:-0.2 11 -0.1;to: 0.2 11 -0.1;dir:alternate;loop: true; dur: 1000;"></a-sphere>
+
+      <!-- Eyes -->
+      <!--left-->
+      <a-sphere color="#fff" position="-0.63 8.3 0.2" radius="0.6" rotation="0 10 0"></a-sphere>
+      <a-sphere color="#000" radius="0.15" position="-0.63 8.1 0.9" animation="property: position; from:-0.63 8.1 0.9;to: -0.63 8.3 0.9;dir:alternate;loop: true; dur: 1000;"></a-sphere>
+      <!--right-->
+      <a-sphere color="#fff" position="0.63 8.3 0.2" radius="0.6" rotation="0 -10 0"></a-sphere>
+      <a-sphere color="#000" radius="0.15" position="0.63 8.1 0.9" animation="property: position; from:0.63 8.1 0.9;to: 0.63 8.3 0.9;dir:alternate;loop: true; dur: 1000;"></a-sphere>
+
+      <!-- Mouth -->
+      <a-ring position="0 8.2 0.55" color="teal" radius-inner="0.9"radius-outer="1"></a-ring>
+      <a-entity position="0 8.2 0.55" rotation="0 0 120" color="orange" geometry="primitive: ring; thetaStart:100;thetaLength:100;radiusOuter: 1; radiusInner: 0.9;"></a-entity>
+
+      <!-- Neck -->
+      <a-box id="neck" color="orange" position="0 6.7 0" width="2" height="0.4"></a-box>
+
+      <!-- Body -->
+      <a-box color="#0276aa" position="0 4.5 0" width="4.5" height="4"></a-box>
+
+      <!-- Left Hand -->
+      <a-cylinder position="-2.5 5.4 0" rotation="30 90 0" color="orange" height="2" width="0.2" radius="0.3"></a-cylinder>
+
+      <a-sphere position="-2.95 4.7 0" rotation="-50 90 0" color="#ef5350" height="1.2" width="0.3" radius="0.4"></a-sphere>
+
+      <a-cylinder position="-3.4 5.05 0" rotation="-50 90 0" height="1.3" width="0.3" radius="0.3" color="orange" ></a-cylinder>
+
+      <a-dodecahedron position="-4.3 5.8 0" radius="0.8" color="#0276aa"></a-dodecahedron>
+
+      <!-- Right Hand -->
+      <a-cylinder position="2.7 5.5 0" rotation="-50 90 0" color="orange" height="2" width="0.2" radius="0.3" ></a-cylinder>
+
+      <a-sphere position="3.4 5 0" rotation="-50 90 0" color="#ef5350" height="1.2" width="0.3" radius="0.4"></a-sphere>
+
+      <a-cylinder position="4 5.4 0" rotation="50 90 0" color="orange" height="1.3" width="0.3" radius="0.3"></a-cylinder>
+
+      <a-dodecahedron position="4.5 5.8 0" radius="0.8" color="#0276aa"></a-dodecahedron>
+
+      <!-- Left Legs -->
+      <a-cylinder color="orange" radius="0.4" height="3.5" position="-1 0.7 0"></a-cylinder>
+
+      <a-sphere position="-1 -0.35 -0.2" rotation="0 0 0" radius ="1" color="#ef5350" ></a-entity>
+
+      <!-- Right Leg -->
+      <a-cylinder color="orange" radius="0.4" height="3.5" position="2 1 0"></a-cylinder>
+
+      <a-sphere position="2 -0.1 -0.2" rotation="0 0 0" radius="1" color="#ef5350"></a-sphere>
+      <a-sky color="#EBEBEB"></a-sky>
+
+      <a-plane id="ground" color="black" position="0 0 0" rotation="-90 0 0" width="20" height="10" ></a-plane>
+
+    </a-scene>
+  </body>
+</html>
